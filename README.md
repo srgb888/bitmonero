@@ -44,6 +44,28 @@ cd monero
 tail -f ~/.bitmonero/bitmonero.log
 ```
 
+## 开启公网服务，搭建同步区块链远程节点
+```
+$ ./monerod  --detach  --rpc-bind-ip 0.0.0.0 --confirm-external-bind
+
+2022-01-09 09:33:58.872	I Monero 'Oxygen Orion' (v0.17.3.0-release)
+Forking to background...
+
+$ ./monerod  status
+
+2022-01-09 09:34:04.216	I Monero 'Oxygen Orion' (v0.17.3.0-release)
+Height: 2533317/2533317 (100.0%) on mainnet, not mining, net hash 3.19 GH/s
+
+$ ss -lt4
+
+State    Local Address:Port 
+LISTEN   0.0.0.0:18080
+LISTEN   0.0.0.0:18081
+```
+## 客户端使用轻钱包,设置远程节点
+- `set_daemon  IP或域名:18081 trusted`  再 `refresh` 刷新
+
+
 # Monero 添加区块链修剪并提高交易效率
 
 ### 发布者：贾斯汀·埃伦霍夫 (Justin Ehrenhofer) 2019年2月1日
