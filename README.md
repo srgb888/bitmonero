@@ -1,3 +1,54 @@
+## Digital Cryptocurrency Blockchain Data_Cutting Bitmonero.Lmdb.Data.Mdb
+### 数字加密货币区块区块链数据_剪裁 Bitmonero.Lmdb.Data.Mdb
+```
+种子文件 文件数：3个文件
+Hash码: 6627f80ae4af815a687876f447ad287e9d067dc6
+路径        size
+data.mdb        41.60 GB
+lock.mdb        8.06 KB
+README.md        0.09 KB
+```
+
+### 使用 参考：   恢复数据库到哪里
+在 Linux 上，默认安装 Monero，您可以在 ~/.bitmonero/lmdb/ 找到您的数据库。
+如果要检查数据库的大小，可以使用以下命令
+
+  du -h ~/.bitmonero/lmdb/data.mdb
+
+windows 使用GUI钱包，手动指定 区块链数据目录
+
+
+## 如何在VPS上架设一个节点
+
+本指南假定您已经设置了您的 VPS 帐户并正在使用 SSH 隧道连接到服务器控制台。
+确保端口 18080 已打开
+monerod 使用此端口与 Monero 网络上的其他节点进行通信。
+
+例如，如果使用ufw：sudo ufw allow 18080 例如，如果使用iptables：sudo iptables -A INPUT -p tcp --dport 18080 -j ACCEPT
+
+下载当前的 Monero Core 二进制文件
+
+  wget https://downloads.getmonero.org/linux64
+
+创建一个目录并提取文件。
+
+  mkdir monero
+  tar -xjvf linux64 -C monero
+
+启动守护进程
+
+  cd monero
+  ./monerod
+
+选项：
+将守护进程作为后台进程启动：
+
+  ./monerod --detach
+
+监控monerodif 作为守护进程运行的输出：
+
+  tail -f ~/.bitmonero/bitmonero.log
+
 # Monero 添加区块链修剪并提高交易效率
 
 ### 发布者：贾斯汀·埃伦霍夫 (Justin Ehrenhofer) 2019年2月1日
