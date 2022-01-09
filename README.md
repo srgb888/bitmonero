@@ -12,9 +12,9 @@ README.md        0.09 KB
 ### 使用 参考：   恢复数据库到哪里
 在 Linux 上，默认安装 Monero，您可以在 ~/.bitmonero/lmdb/ 找到您的数据库。
 如果要检查数据库的大小，可以使用以下命令
-
-  du -h ~/.bitmonero/lmdb/data.mdb
-
+```
+du -h ~/.bitmonero/lmdb/data.mdb
+```
 windows 使用GUI钱包，手动指定 区块链数据目录
 
 
@@ -25,29 +25,24 @@ windows 使用GUI钱包，手动指定 区块链数据目录
 monerod 使用此端口与 Monero 网络上的其他节点进行通信。
 
 例如，如果使用ufw：sudo ufw allow 18080 例如，如果使用iptables：sudo iptables -A INPUT -p tcp --dport 18080 -j ACCEPT
+```
+# 下载当前的 Monero Core 二进制文件
+wget https://downloads.getmonero.org/linux64
 
-下载当前的 Monero Core 二进制文件
+# 创建一个目录并提取文件。
+mkdir monero
+tar -xjvf linux64 -C monero
 
-  wget https://downloads.getmonero.org/linux64
+# 启动守护进程
+cd monero
+./monerod
 
-创建一个目录并提取文件。
-
-  mkdir monero
-  tar -xjvf linux64 -C monero
-
-启动守护进程
-
-  cd monero
-  ./monerod
-
-选项：
-将守护进程作为后台进程启动：
-
+# 选项：将守护进程作为后台进程启动：
   ./monerod --detach
 
-监控monerodif 作为守护进程运行的输出：
-
-  tail -f ~/.bitmonero/bitmonero.log
+# 监控monerodif 作为守护进程运行的输出：
+tail -f ~/.bitmonero/bitmonero.log
+```
 
 # Monero 添加区块链修剪并提高交易效率
 
