@@ -8,6 +8,17 @@ data.mdb        41.60 GB
 lock.mdb        8.06 KB
 README.md        0.09 KB
 ```
+- 下载地址 请先BASE64解码
+```
+5LiL6L295Zyw5Z2AOiDpppLlpLTlkoxQVE1TRwoKaHR0cHM6Ly9rcC5tLXRlYW0
+uY2MvZGV0YWlscy5waHA/aWQ9NTM3NTk2JmhpdD0xCgpodHRwczovL3B0Lm1zZy
+52Zy9kZXRhaWxzLnBocD9pZD0xMjA1NiZlZGl0ZWQ9MQo=
+```
+
+### 数字钱包客户端命令行新建测试钱包演示，本数字加密货币区块区块链数据就是为了可以离线建立数字钱包使用的
+![monero-wallet-cli.gif](https://raw.githubusercontent.com/srgb888/bitmonero/main/monero-wallet-cli.gif)
+
+
 
 ### 使用 参考：   恢复数据库到哪里
 在 Linux 上，默认安装 Monero，您可以在 ~/.bitmonero/lmdb/ 找到您的数据库。
@@ -64,9 +75,6 @@ LISTEN   0.0.0.0:18080
 LISTEN   0.0.0.0:18081
 ```
 ![monerod_detach.png](https://raw.githubusercontent.com/srgb888/bitmonero/main/monerod_detach.png)
-
-## 数字钱包客户端命令行新建测试钱包演示
-![monero-wallet-cli.gif](https://raw.githubusercontent.com/srgb888/bitmonero/main/monero-wallet-cli.gif)
 
 ## 客户端使用轻钱包,设置远程节点
 - `set_daemon  IP或域名:18081 trusted`  再 `refresh` 刷新
