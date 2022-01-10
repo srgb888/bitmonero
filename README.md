@@ -43,6 +43,7 @@ cd monero
 # 监控monerodif 作为守护进程运行的输出：
 tail -f ~/.bitmonero/bitmonero.log
 ```
+![monerod](https://raw.githubusercontent.com/srgb888/bitmonero/main/monerod.png)
 
 ## 开启公网服务，搭建同步区块链远程节点
 ```
@@ -62,9 +63,13 @@ State    Local Address:Port
 LISTEN   0.0.0.0:18080
 LISTEN   0.0.0.0:18081
 ```
+![monerod_detach.png](https://raw.githubusercontent.com/srgb888/bitmonero/main/monerod_detach.png)
+
+## 数字钱包客户端命令行新建测试钱包演示
+![monero-wallet-cli.gif](https://raw.githubusercontent.com/srgb888/bitmonero/main/monero-wallet-cli.gif)
+
 ## 客户端使用轻钱包,设置远程节点
 - `set_daemon  IP或域名:18081 trusted`  再 `refresh` 刷新
-
 
 # Monero 添加区块链修剪并提高交易效率
 
